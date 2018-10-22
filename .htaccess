@@ -10,3 +10,4 @@ RewriteRule . /pub_wordpress/index.php [L]
 </IfModule>
 
 # END WordPress
+Header set X-Frame-Options SAMEORIGIN

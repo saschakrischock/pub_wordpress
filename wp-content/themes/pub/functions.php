@@ -98,6 +98,8 @@ function pub_content_width() {
 }
 add_action( 'after_setup_theme', 'pub_content_width', 0 );
 
+
+add_action( 'send_headers', 'send_frame_options_header', 10, 0 );
 /**
  * Register widget area.
  *
@@ -124,9 +126,9 @@ function pub_scripts() {
 
 	wp_enqueue_script( 'pub-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-wp_enqueue_script( 'scrollto', '//balupton.github.io/jquery-scrollto/lib/jquery-scrollto.js', array( 'jquery' ), '', true );
-wp_enqueue_script( 'history-js', '//browserstate.github.io/history.js/scripts/bundled/html4+html5/jquery.history.js', array(), '', true );
-wp_enqueue_script( 'ajaxify', '//raw.githubusercontent.com/AbacusPowers/ajaxify/master/ajaxify-html5.js', array( 'jquery' ), '', true ); ;
+wp_enqueue_script( 'scrollto',get_template_directory_uri() . '/js/jquery-scrollto.js', array( 'jquery' ), '', true );
+wp_enqueue_script( 'history-js',get_template_directory_uri() . '/js/jquery.history.js', array(), '', true );
+wp_enqueue_script( 'ajaxify',get_template_directory_uri() . '/js/ajaxify-html5.js', array( 'jquery' ), '', true ); ;
 
 	wp_enqueue_script( 'pub-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

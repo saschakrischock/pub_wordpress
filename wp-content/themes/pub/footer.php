@@ -10,25 +10,16 @@
  */
 
 ?>
-
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'pub' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'pub' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'pub' ), 'pub', '<a href="http://sasckarischock.com">Sascha Krischock</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+</div>
+<nav id="site-navigation" class="main-navigation">
+	<div class="wrapper-main">
+		<a class="pub-main">Contact<br>PUB<br>About</a>
+	</div>
+	<div class="wrapper">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>radio" class="radio bubble-down">Radio</a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>tv" class="video bubble-down">TV</a>
+	</div>
+</nav><!-- #site-navigation -->
 
 <?php wp_footer(); ?>
 
